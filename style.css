@@ -1,0 +1,10 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.75rem;
+    margin-left: -0.75rem;
+}
+
+.border-color-primary {
+    border-color: 0.25rem solid #f6c23e!important;
+}
