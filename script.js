@@ -7,26 +7,20 @@
       console.log(response);
       const data = response.results;
       let cards = "";
-      data.forEach((m) => {
+      data.forEach((pok) => {
         cards += `
 
-        <div class="col-xl-3 col-md-6 mb-4">
-        <div class="card border-color-primary shadow h-100 py-2 border-primary blue">
-            <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                        <div class="h5 mb-0 text-center font-weight-bold text-gray-800">${m.name}</div>
-                    </div>
-                    <a href="${m.url}" class="btn btn-primary btn-icon-split btn-sm btn-block">
-                        <span class="icon text-white-50">
-                            <i class="fas fa-flag"></i>
-                        </span>
-                        <span class="text">Detail</span>
-                    </a>
-                </div>
-            </div>
+      <div class="col-xl-3 col-md-6 my-4">
+      <div class="card border-primary  shadow h-100 border-primary blue" style="max-width: 30rem">
+        <div class="card-body text-primary text-center">
+          <p class="h5 mb-2 card-text text-dark">
+            ${pok.name}
+          </p>
+          <a href="${pok.url}" class="btn btn-primary">Detail</a>
         </div>
-    </div>`;
+      </div>
+      
+      </div>`;
       });
       const pokemonContainer = document.querySelector("#card");
       pokemonContainer.innerHTML = cards;
